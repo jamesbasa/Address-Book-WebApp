@@ -1,0 +1,45 @@
+.card {
+  color: var(--color-graymidnight);
+  padding: 16px;
+  box-shadow: var(--box-shadow);
+  margin: 24px 0;
+  &__edit {
+    display: none;
+    &--visible {
+      display: block;
+    }
+  }
+}
+
+.button {
+  padding: 2px 12px;
+  border-radius: 2px;
+  font-size: 16px;
+  &:hover {
+    transition: 0.2s;
+  }
+  &--primary {
+    background-color: var(--color-cerulean);
+    color: var(--color-white);
+    &:hover {
+      background-color: #1878E0;
+    }
+  }
+  &--secondary {
+    box-shadow: 0 0 0 2px var(--color-cerulean);
+    color: var(--color-cerulean);
+    &:hover {
+      background-color: var(--color-cerulean);
+      color: var(--color-white);
+    }
+  }
+  &--error {
+    color: var(--color-white);
+    box-shadow: 0 0 0 2px var(--color-error);
+    background-color: var(--color-error);
+    &:hover {
+      box-shadow: 0 0 0 2px var(--color-error-dark);
+      background-color: var(--color-error-dark);
+    }
+  }
+}

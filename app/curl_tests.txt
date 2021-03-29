@@ -1,0 +1,35 @@
+// get address
+curl localhost:3001/addresses/{id}
+
+// get address (that doesn't exist)
+curl localhost:3001/addresses/12345
+
+// get all addresses
+curl localhost:3001/addresses
+
+// add new address
+curl localhost:3001/addresses -d '{"line1":"123 Default St", "line2":"# 100", "city":"San Francisco", "state":"CA", "zip":"94100"}' -H "Content-Type: application/json"
+
+// add new address (doesn't meet requirements)
+curl localhost:3001/addresses -d '{"line1":"123 Default St", "line2":"# 100", "city":"San Francisco", "state":"CA"}' -H "Content-Type: application/json"
+
+// edit address
+curl -X PUT localhost:3001/addresses/{id} -d '{"line1":"EDITED ADDRESS", "line2":"# 100", "city":"San Francisco", "state":"CA", "zip":"94100"}' -H "Content-Type: application/json"
+
+// edit address (doesn't exist)
+curl -X PUT localhost:3001/addresses/99 -d '{"line1":"EDITED ADDRESS", "line2":"# 100", "city":"San Francisco", "state":"CA", "zip":"94100"}' -H "Content-Type: application/json"
+
+// edit address (doesn't meet requirements)
+curl -X PUT localhost:3001/addresses/{id} -d '{"line1":"EDITED ADDRESS", "line2":"# 100", "city":"San Francisco", "state":"CA"}' -H "Content-Type: application/json"
+
+// delete address (test existent and nonexistent ids)
+curl -X DELETE localhost:3001/addresses/{id}
+
+// search for address
+curl localhost:3001/addresses/search -d '{"searchInput":"addr"}' -H "Content-Type: application/json"
+
+// search for address (doesn't exist)
+curl localhost:3001/addresses/search -d '{"searchInput":"+"}' -H "Content-Type: application/json"
+
+// test the provided JSON file
+curl -X POST -H "Content-Type: application/json" -d @./addresses.json localhost:3001/addresses

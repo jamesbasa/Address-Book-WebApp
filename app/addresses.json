@@ -1,0 +1,33 @@
+[
+  {
+    "line1": "Patriot Pl",
+    "city": "Foxborough",
+    "state": "MA",
+    "zip": "02035"
+  },
+  {
+    "line1": "24 Willie Mays Plaza",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94107"
+  },
+  {
+    "line1": "123 Default St.",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001"
+  },
+  {
+    "line1": "Seattle Dr",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "98115"
+  },
+  {
+    "line1": "321 Warrior Way",
+    "line2": "Suite 1",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94132"
+  }
+]
